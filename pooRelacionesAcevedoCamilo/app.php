@@ -1,10 +1,10 @@
 <?php 
-
+include_once 'Computer.php';
 include_once 'Desktop.php';
 include_once 'laptop.php';
 
-$laptop1 = new Laptop("Marca1", "8GB", "DDR4", "SSD", "256GB", "Windows 10", "Microsoft Office", "Intel Core i5", 3, true, "4 horas");
-$laptop2 = new Laptop("Marca2", "16GB", "DDR4", "HDD", "1TB", "macOS", "iWork", "AMD Ryzen 7", 4, false, "6 horas");
+$laptop1 = new Laptop("HP", "8GB", "DDR4", "SSD", "256GB", "Windows 10", "Microsoft Office", "Intel Core i5", 3, true, "4 horas");
+$laptop2 = new Laptop("Apple Mac", "16GB", "DDR4", "HDD", "1TB", "macOS", "iWork", "AMD Ryzen 7", 4, false, "6 horas");
 
 $desktop1 = new Desktop("Marca1", "16GB", "DDR4", "HDD", "1TB", "Windows 10", "Microsoft Office", "Intel Core i7", 5, true);
 $desktop2 = new Desktop("Marca2", "32GB", "DDR4", "SSD", "512GB", "Ubuntu", "LibreOffice", "AMD Ryzen 9", 8, false);
@@ -43,3 +43,6 @@ if ($desktop1->getUPS()) {
 } else {
     echo "No<br>";
 }
+
+echo 'objetos instanciados: ' . Computador::obtenerContadorObjetos(). '</br>';
+echo 'fecha actual:'. Computador::obtenerFechaHoy();
